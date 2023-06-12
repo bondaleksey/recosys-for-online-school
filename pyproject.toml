@@ -8,9 +8,9 @@ version = "0.0.1"
 authors = [
     {name = "Aleksey Bondarenko", email = "bondaleksey@gmail.com"},
 ]
-description = "recomenda"
+description = "recommendation system for online school"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.10"
 keywords = ["one", "two"]
 classifiers = [
     "Programming Language :: Python :: 3",    
