@@ -1,0 +1,7 @@
+venv
+small_tests
+__pycache__
+recosys.egg-info
+
+data
+*.joblib
