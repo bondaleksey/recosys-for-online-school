@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: recosys-deployment
+  namespace: recosys
+  labels:
+    app: recosys
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: recosys
+  template:
+    metadata:
+      labels:
+        app: recosys
+    spec:
+      containers:
+        - name: recosys
+          image: bondaleksey/recosys:0.0.1
+          ports:
+            - containerPort: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: recosys
+  name: recosys-deployment-service
+spec:
+  selector:
+    app: recosys
+  ports:
+    - name: recosys-deployment-service-port
+      protocol: TCP
+      port: 9000
+      targetPort: 8000
