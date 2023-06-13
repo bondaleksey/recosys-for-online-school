@@ -1,0 +1,9 @@
+/notebook
+/reports
+/tests
+/small_tests
+/k8s
+*.md
+.git
+.gitignore
+.venv/
